@@ -1,0 +1,52 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-subtitle>Seja bem vindo</mat-card-subtitle>
+    <mat-card-title>The Motors</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-form-field appearance="outline" style="width:100%">
+        <mat-label>Secret Key:</mat-label>
+        <input matInput #input maxlength="64" placeholder="Secret Key:">
+        <mat-hint align="end">{{input.value?.length || 0}}/64</mat-hint>
+      </mat-form-field>
+      <div class="example-container">
+      <mat-form-field appearance="outline" class="form-inputs">
+        <mat-label>Selecione sua corretora:</mat-label>
+        <mat-select>
+          <mat-option value="BN">Binance</mat-option>
+          <mat-option value="KU">Kucoin</mat-option>
+          <mat-option value="MB">Mercado Bitcoin</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-inputs">
+        <mat-label>Selecione seu par:</mat-label>
+        <mat-select>
+          <mat-option value="ADAUS">ADA/USDT</mat-option>
+          <mat-option value="ADABU">ADA/BUSD</mat-option>
+          <mat-option value="ADABR">ADA/BRL</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+        <label>Tipo da operação: </label><br/>
+        <mat-radio-group  appearance="outline" class="form-inputs" >
+          <mat-radio-button style="margin-right: 30px;" value="long">Long</mat-radio-button>
+          <mat-radio-button style="margin-right: 20%;" value="short">Short</mat-radio-button>
+        </mat-radio-group>
+      <mat-form-field style="width: 30%;" hintLabel="Max 2 characters" appearance="outline" class="form-inputs">
+        <mat-label>Tamanho</mat-label>
+        <input matInput #input maxlength="2" placeholder="Tamanho">
+        <mat-hint align="end">{{input.value?.length || 0}}/2</mat-hint>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions align="end">
+    <button left mat-button>Salvar</button>
+    <button left mat-button>Cancelar</button>
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
